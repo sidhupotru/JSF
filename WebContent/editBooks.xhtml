@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+    <title>Reveles JSF Test</title>
+    <style type="text/css">
+        .updateBtnStyle {
+        	width: 80px !important;        	
+        }
+    </style>
+</h:head>
+<h:body>
+        <h:form id="form" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Books List</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="catagoery" class="control-label col-sm-2">Books Catagoery:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="catagoery-id" value="#{editRecordObj.book_catagoery}" class="form-control"/>
+                </div>
+            </div>
+              <div class="form-group">
+                <h:outputLabel for="title" class="control-label col-sm-2">Books Title:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="title-id" value="#{editRecordObj.book_title}" class="form-control"/>
+                </div>
+            </div>
+		<div class="form-group">
+			<h:outputLabel for="Price" class="control-label col-sm-2">Price:</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="price-id" value="#{editRecordObj.book_price}"
+					class="form-control" />
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<h:outputLabel for="first_author" class="control-label col-sm-2">First Author:</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="first_author-id" value="#{editRecordObj.first_author}"
+					class="form-control" />
+			</div>
+		</div>
+		
+			<div class="form-group">
+			<h:outputLabel for="second_author" class="control-label col-sm-2">Second Author:</h:outputLabel>
+			<div class="col-sm-4">
+				<h:inputText id="second_author-id" value="#{editRecordObj.second_author}"
+					class="form-control" />
+			</div>
+		</div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{booksdata.updateBooksDetails(editRecordObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
